@@ -14,14 +14,14 @@ class Games extends Migration
     public function up()
     {
         
-        // Schema::create('games', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->foreignId('user_id')->constrained('users');
-        //     $table->foreignId('user_id_2')->constrained('users');
-        //     $table->integer('winner_id')->nullable();
-        //     $table->dateTime('created_at');
-        //     $table->dateTime('updated_at');
-        // });
+        Schema::create('games', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id_2')->constrained('users');
+            $table->integer('winner_id')->nullable();
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
+        });
     }
 
     /**

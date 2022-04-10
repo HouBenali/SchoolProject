@@ -14,21 +14,21 @@ class Pokedex extends Migration
     public function up()
     {
         //
-        Schema::create('pokedex', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('image_path');
-            $table->integer('HP')->nullable();
-            $table->integer('ATK')->nullable();
-            $table->integer('DEF')->nullable();
-            $table->integer('SPD')->nullable();
-            $table->string('type')->nullable();
-            $table->string('moves')->nullable();
-            $table->string('rarity')->nullable();
-            $table->integer('price')->nullable();
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
-            });
+        // Schema::create('pokedex', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name');
+        //     $table->string('image_path');
+        //     $table->integer('HP')->nullable();
+        //     $table->integer('ATK')->nullable();
+        //     $table->integer('DEF')->nullable();
+        //     $table->integer('SPD')->nullable();
+        //     $table->string('type')->nullable();
+        //     $table->string('moves')->nullable();
+        //     $table->string('rarity')->nullable();
+        //     $table->integer('price')->nullable();
+        //     $table->dateTime('created_at');
+        //     $table->dateTime('updated_at');
+        //     });
     }
 
     /**
