@@ -13,17 +13,17 @@ class GamesOffline extends Migration
      */
     public function up()
     {
-        Schema::create('games_offline', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('poke_player')->constrained('pokemons');
-            $table->foreignId('poke_op')->constrained('pokemons');
-            $table->integer('rewards')->nullable();
-            $table->integer('wins')->nullable();
-            $table->integer('coins')->default('0');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
-        });
+        // Schema::create('games_offline', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('user_id')->constrained('users');
+        //     $table->foreignId('poke_player')->constrained('pokemons');
+        //     $table->foreignId('poke_op')->constrained('pokemons');
+        //     $table->integer('rewards')->nullable();
+        //     $table->integer('wins')->nullable();
+        //     $table->integer('coins')->default('0');
+        //     $table->dateTime('created_at');
+        //     $table->dateTime('updated_at');
+        // });
     }
 
     /**

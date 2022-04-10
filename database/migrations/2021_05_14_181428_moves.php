@@ -13,13 +13,13 @@ class Moves extends Migration
      */
     public function up()
     {       
-         Schema::create('moves', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('poke_id')->constrained('pokemons');
-            $table->string('move')->nullable();
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
-          });
+        //  Schema::create('moves', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('poke_id')->constrained('pokemons');
+        //     $table->string('move')->nullable();
+        //     $table->dateTime('created_at');
+        //     $table->dateTime('updated_at');
+        //   });
     }
 
     /**
