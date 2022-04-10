@@ -1,7 +1,8 @@
 <template>
-    <div>Pokemones 
+    <div class="pokemons"> 
+        <div class="chooseArea">Pokemones</div>
         <pre>{{pokemons}}</pre>
-        <!-- <pre>{{pokemon}}</pre> -->
+        <pre>{{pokemon}}</pre>
     </div>
     
 </template>
@@ -157,8 +158,9 @@ export default {
         }
     },
     mounted() {
-        //console.log('Pokemon montado')
-        this.getPokemons ()
+        console.log('Pokemon montado')
+        this.getPokemons()
+
         }
     }
 
