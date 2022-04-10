@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [App\Http\Controller\Web\WebController::class,'index']);
 
-Route::get('/pokedex', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokemons');
+Route::get('/pokedex', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokedex');
 Route::get('/', [App\Http\Controllers\web\WebController::class, 'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/starting', [App\Http\Controllers\HomeController::class, 'index'])->name('starting');
