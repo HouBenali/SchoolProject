@@ -1,0 +1,29 @@
+                                          Table "public.users"
+   Column    |              Type              | Collation | Nullable |              Default              
+-------------+--------------------------------+-----------+----------+-----------------------------------
+ id          | bigint                         |           | not null | nextval('users_id_seq'::regclass)
+ nick        | character varying(255)         |           | not null | 
+ email       | character varying(255)         |           | not null | 
+ password    | character varying(255)         |           | not null | 
+ image       | character varying(255)         |           |          | 
+ wins        | integer                        |           | not null | 0
+ loses       | integer                        |           | not null | 0
+ game_played | integer                        |           | not null | 0
+ pokemons    | character varying(255)         |           |          | 
+ decks       | character varying(255)         |           |          | 
+ main_deck   | character varying(255)         |           |          | 
+ coins       | integer                        |           | not null | 0
+ cart        | character varying(255)         |           |          | 
+ turn        | character varying(255)         |           |          | 
+ created_at  | timestamp(0) without time zone |           | not null | 
+ updated_at  | timestamp(0) without time zone |           | not null | 
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (id)
+    "users_email_unique" UNIQUE CONSTRAINT, btree (email)
+Referenced by:
+    TABLE "cart" CONSTRAINT "cart_user_id_foreign" FOREIGN KEY (user_id) REFERENCES users(id)
+    TABLE "games_offline" CONSTRAINT "games_offline_user_id_foreign" FOREIGN KEY (user_id) REFERENCES users(id)
+    TABLE "games" CONSTRAINT "games_user_id_2_foreign" FOREIGN KEY (user_id_2) REFERENCES users(id)
+    TABLE "games" CONSTRAINT "games_user_id_foreign" FOREIGN KEY (user_id) REFERENCES users(id)
+    TABLE "shop" CONSTRAINT "shop_user_id_foreign" FOREIGN KEY (user_id) REFERENCES users(id)
+

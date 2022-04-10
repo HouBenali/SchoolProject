@@ -1,0 +1,18 @@
+.form{
+    text-align: center;
+    border:solid 3px black;
+    border-radius: 1vh;
+    min-width: 300px;
+    padding: 2vh;
+    padding-top: 0;
+    margin-top: 3.5vh;
+    margin-bottom: 3.5vh;
+    width: 37%;
+    background-color: white;
+  }
+
+.messageOrerror{
+margin-top: 2vh;
+}
+
+  

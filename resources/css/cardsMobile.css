@@ -1,0 +1,164 @@
+@media (max-width: 630px){
+
+.carta{
+    
+    font-size: 2.7vw;
+    width: 115px;
+    height: 160px;
+    /*max-width:150px ;*/
+    background: linear-gradient( to top left, rgb(77, 76, 76), white, rgb(90, 90, 90));
+    background-size:300% 300%;
+    margin-top:2vw;
+    border: solid black 2px !important;
+    animation: reflect 6s infinite ease-in;
+    animation-direction: alternate;
+}
+
+.behind{
+    width: 115px;
+    height: 160px;
+    /*animation-direction: alternate;*/
+}
+
+.behind-card-name{
+    font-size: 12px;
+    padding: 0.5vh;
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+@keyframes reflect {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50% ;
+    }
+}
+    
+.card-img-top{
+    border: black 1px solid;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 200px;
+    max-width: 90px;
+    height: 80px;
+    background-color: white;
+}
+
+
+.card-name{
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+}
+
+.card-text{
+    border-bottom: solid 2px black;
+    font-size: 10px;
+    color: black;
+    
+}
+
+.card-attack{
+    font-size: 10px;
+    
+}
+
+.types-icon{
+    max-width: 11px;
+}
+
+
+.hp{
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Roboto Condensed";
+    color: white;
+  }
+ 
+  .hp-bar-fill-opponent{
+    position: absolute;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .hp-bar-fill-player{
+    position: absolute;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+
+  .hp-bar{
+    position: relative;
+    height: 15px;
+    width: 90%;
+    margin-left: 1.5vw;
+    border-radius: 20px;
+    background: grey;
+    opacity: 0.5;
+  }
+
+.level{
+    position: relative;
+    opacity: 0.7;
+    font-size: 5px;
+    font-family: "Roboto Condensed";
+  }
+  
+.player-level{
+  
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+    font-size: 14px;
+    font-family: "Roboto Condensed";
+  }
+
+
+/* Css de Comienzo.vue  */
+
+  @font-face {
+    font-family: PokemonSolid;
+    src: url('../fonts/Pokemon Solid.ttf');
+}
+
+.welcome{
+    font-family: "PokemonSolid";
+    color: yellow;
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+    font-size: 19px;
+    height: 40px;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.router{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+
+
+  
+  
+}
