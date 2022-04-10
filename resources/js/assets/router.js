@@ -55,7 +55,7 @@ const router = new VueRouter({
         { path: '/changeAvatar', name: 'avatar', component: Avatar,  meta:  { requiresAuth: true, requiresPokemon: true}},
         { path: '/changePass', name: 'changePass', component: ChangePass,  meta:  { requiresAuth: true, requiresPokemon: true}},
         { path: '/changeProfile', name: 'changeProfile', component: ChangeProfile,  meta: { requiresAuth: true, requiresPokemon: true}},
-        { path: '/pokedex', name: 'pokemons', component:getPokemons,  meta: { requiresAuth: true } },
+        //{ path: '/pokedex', name: 'pokedex', component:getPokemons,  meta: { requiresAuth: true } },
         //solo usar path pokemons cuando se quiera obtener datos de la api externa y guardarlos en la DDBB
          
         

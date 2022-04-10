@@ -2,7 +2,7 @@
     <div class="pokemons"> 
         <div class="chooseArea">Pokemones</div>
         <pre>{{pokemons}}</pre>
-        <pre>{{pokemon}}</pre>
+        <!-- <pre>{{pokemon}}</pre> -->
     </div>
     
 </template>

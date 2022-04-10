@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 */
 
 //Peticion para actualizar los precios de los pokemon
-//Route::get('pricePoke', [App\Http\Controllers\api\PokedexController::class,'pricePoke']); //UPDATE PRICE_POKEMONS
+Route::get('pricePoke', [App\Http\Controllers\api\PokedexController::class,'pricePoke']); //UPDATE PRICE_POKEMONS
 
 Route::post('user/restarPrice', [App\Http\Controllers\UserController::class,'restar_price']);
 Route::post('user/sumarPrice', [App\Http\Controllers\UserController::class,'sumar_price']);
