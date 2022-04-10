@@ -68,7 +68,8 @@ class CartController extends ApiResponseController
         $total = $request->all()['price_total'];
         $pokes_id = $request->all()['pokes_id'];
         //dd($pokes_id);
-        $user=userData();
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
 
 
         for ($x=0; $x<count($pokes_id); $x++){

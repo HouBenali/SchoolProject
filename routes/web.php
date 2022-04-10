@@ -27,9 +27,7 @@ Route::get('/Bulbasaur', [App\Http\Controllers\HomeController::class, 'index'])-
 Route::get('/Squirtle', [App\Http\Controllers\HomeController::class, 'index'])->name('tutorial');
 Route::get('/Charmander', [App\Http\Controllers\HomeController::class, 'index'])->name('tutorial');
 Route::get('/adventure', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/online', [App\Http\Controllers\WebController::class, 'index']);
 Route::get('/wildMap/{area}', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/pokemons', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokemons');
 Route::get('/profile', [App\Http\Controllers\web\WebController::class, 'index'])->name('profile');
 Route::get('/shop', [App\Http\Controllers\web\WebController::class, 'index'])->name('shop');
 Route::get('/myshops', [App\Http\Controllers\web\WebController::class, 'index'])->name('myshops');
@@ -38,7 +36,8 @@ Route::get('/decks', [App\Http\Controllers\web\WebController::class, 'index'])->
 Route::get('/changeAvatar', [App\Http\Controllers\web\WebController::class, 'index'])->name('avatar');
 Route::get('/changePass', [App\Http\Controllers\web\WebController::class, 'index'])->name('changePass');
 Route::get('/changeProfile', [App\Http\Controllers\web\WebController::class, 'index'])->name('changeProfile');
-
+Route::get('/online', [App\Http\Controllers\WebController::class, 'index']);
+Route::get('/pokemons', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokemons');
 
 Auth::routes();
 

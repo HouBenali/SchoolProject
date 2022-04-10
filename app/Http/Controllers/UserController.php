@@ -33,7 +33,8 @@ class UserController extends Controller{
 
     public function setPokemon(Request $request){
         //Añade pokemon a la tabla pokemons
-        $user=userData();
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
         $poke = Pokemon::create([
             'user_id' => $user->id,
             'poke_id' => $request->id,
@@ -43,14 +44,21 @@ class UserController extends Controller{
     }
 
     public function setRewards(Request $request){
-        $user=userData();
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
   
         $gmOff = new GamesOffline();
         $gmOff->user_id = $user->id;
         $gmOff->poke_player = $request->poke_player;
         $gmOff->poke_op = $request->poke_op;
         $gmOff->wins = $request->wins;
-        $pokemons= userPokesID();
+
+        $arrayIdPokes=[];
+        $pokemons = Pokemon::where('user_id',$user->id)->get();
+        for ($i=0; $i < count($pokemons) ; $i++) { 
+            array_push($arrayIdPokes,$pokemons[$i]->poke_id);
+        }
+        $pokemons= $arrayIdPokes;
 
         //error_log($request->coins);
         //error_log($request->droppedPokemon);
@@ -82,7 +90,8 @@ class UserController extends Controller{
     public function restar_price (Request $request) {
         
         $price = $request->all()['price'];
-        $user=userData();
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
         $res = $user->coins -= $price;
         $user->save();
         return $res;
@@ -91,7 +100,8 @@ class UserController extends Controller{
     public function sumar_price (Request $request) {
 
         $price = $request->all()['price'];
-        $user=userData();
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
         $res = $user->coins += $price;
         // dd($user);
         $user->save();
@@ -101,7 +111,10 @@ class UserController extends Controller{
     public function pokesUser(){
 
         $myPokes=[];
-        $pokemons = userPokes();
+        
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
+        $pokemons = Pokemon::where('user_id',$user->id)->get();
        
         for ($i=0; $i < count($pokemons); $i++) { 
             array_push($myPokes, $pokemons[$i]->poke_id);
@@ -111,8 +124,10 @@ class UserController extends Controller{
     }
 
     public function hasPokes(){
-        
-        if(count(userPokes())>0){
+        $id=auth()->user()->id;
+        $user=User::where('id',$id)->first();
+        $pokemons = Pokemon::where('user_id',$user->id)->get();
+        if(count($pokemons)>0){
             return true;
         } 
         else {
