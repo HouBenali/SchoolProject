@@ -38,8 +38,7 @@ const router = new VueRouter({
         { path: '/login', component:  LoginController , name: 'login', meta: { guest: true }},
         { path: '/forgot', name: 'forgot',  component: Forgot , meta:  { guest: true }},
         { path: '/reset/:token', name: 'reset', component: Reset,  meta:  { guest: true }},
-        { path: '/', name: 'base', component: () => import(/* webpackChunkName: "Raiz" */"../components/Home.vue"),
-         meta: { requiresAuth: true, requiresPokemon: true}},
+        { path: '/', name: 'base', component: () => import(/* webpackChunkName: "Raiz" */"../components/Home.vue"), meta: { requiresAuth: true, requiresPokemon: true}},
 
         { path: '/home', name: 'home', component: Home , meta:{ requiresAuth: true, requiresPokemon: true}},
 
@@ -56,9 +55,9 @@ const router = new VueRouter({
         { path: '/changeAvatar', name: 'avatar', component: Avatar,  meta:  { requiresAuth: true, requiresPokemon: true}},
         { path: '/changePass', name: 'changePass', component: ChangePass,  meta:  { requiresAuth: true, requiresPokemon: true}},
         { path: '/changeProfile', name: 'changeProfile', component: ChangeProfile,  meta: { requiresAuth: true, requiresPokemon: true}},
-
+        { path: '/pokemons', name: 'pokemons', component:getPokemons },
         //solo usar path pokemons cuando se quiera obtener datos de la api externa y guardarlos en la DDBB
-         { path: '/pokedex', name: 'pokedex', component:getPokemons,  meta: { requiresAuth: true } },
+         
         
         { path: '*', name: 'error', component: () => import(/* webpackChunkName: "Error" */"../components/Error.vue")},
     ],   
