@@ -58,7 +58,7 @@ const router = new VueRouter({
         { path: '/changeProfile', name: 'changeProfile', component: ChangeProfile,  meta: { requiresAuth: true, requiresPokemon: true}},
 
         //solo usar path pokemons cuando se quiera obtener datos de la api externa y guardarlos en la DDBB
-        // { path: '/pokemons', name: 'pokemons', component:getPokemons,  meta: { requiresAuth: true } },
+         { path: '/pokemons', name: 'pokemons', component:getPokemons,  meta: { requiresAuth: true } },
         
         { path: '*', name: 'error', component: () => import(/* webpackChunkName: "Error" */"../components/Error.vue")},
     ],   

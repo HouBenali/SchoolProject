@@ -34,12 +34,12 @@ export default {
             .then(res => {
                 return res.json()
             }).then(json => {
-                // console.log(json.results)
+                 console.log(json.results)
                 for (let x=0; x<151; x++){
                     urls_poke.push(json.results[x].url)
                 }
             })
-            // console.log(urls_poke)
+            console.log(urls_poke)
             this.getPokemon(urls_poke)
         },
 
