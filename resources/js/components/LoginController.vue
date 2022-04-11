@@ -58,7 +58,7 @@ export default {
     },
     mounted(){
         //console.log(document.cookie("data001"))
-        this.$router.go('login')  
+       //this.$router.go('login')  
     },
     methods: {
         async login () {
