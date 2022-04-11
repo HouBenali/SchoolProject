@@ -25,7 +25,7 @@ class DeckController extends Controller{
             
         $deck = new Deck();
         
-        $pokemons = userPokes();
+        $pokemons = Pokemon::where('user_id',$user->id)->get();
         $poke_id = $pokemons[0]->poke_id;
 
         $deck->user_id = $user->id;

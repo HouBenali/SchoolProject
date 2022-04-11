@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [App\Http\Controller\Web\WebController::class,'index']);
 
-Route::get('/pokedex', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokedex');
+
 Route::get('/', [App\Http\Controllers\web\WebController::class, 'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/starting', [App\Http\Controllers\HomeController::class, 'index'])->name('starting');
@@ -27,7 +27,8 @@ Route::get('/Bulbasaur', [App\Http\Controllers\HomeController::class, 'index'])-
 Route::get('/Squirtle', [App\Http\Controllers\HomeController::class, 'index'])->name('tutorial');
 Route::get('/Charmander', [App\Http\Controllers\HomeController::class, 'index'])->name('tutorial');
 Route::get('/adventure', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/online', [App\Http\Controllers\WebController::class, 'index']);
+//Route::get('/online', [App\Http\Controllers\WebController::class, 'index']);
+//Route::get('/pokedex', [App\Http\Controllers\web\WebController::class, 'index'])->name('pokedex');
 Route::get('/wildMap/{area}', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/profile', [App\Http\Controllers\web\WebController::class, 'index'])->name('profile');
